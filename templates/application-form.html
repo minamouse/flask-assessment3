@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block body %}
+    <head>
+        <title>Application Form</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <h2>Job Application Form</h2>
+        <p id="bordered">Apply for a super awesome job at ubermelon! Just please enter your full, legal name, desired salary and select the job you're applying for.</p>
+
+        <form action="/application-success" method="POST">
+            First Name: <input type="text" name="firstname" class="yellow"><br>
+            Last Name: <input type="text" name="lastname" class="yellow" id="lstnm"><br>
+            Salary: <input type="number" name="salary" class="yellow"><br>
+            Job: 
+            <select name="job" class="yellow">
+                {% for job in jobs %}
+                    <option>{{ job }}</option>
+                {% endfor %}
+            </select><br>
+            <input type="submit" class="yellow">
+        </form>
+
+    </body>
+{% endblock %}

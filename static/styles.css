@@ -1,0 +1,15 @@
+#bordered {
+    border: 2px solid black;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+#lstnm {
+    font-weight: bold;
+}
+
+.centered {
+    text-align: center;
+}
